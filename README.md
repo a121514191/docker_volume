@@ -19,13 +19,13 @@ data volume container 也支援備份及還原的功能。
 
 >docker create -v /config --name volume_test busybox
 
-![](https://github.com/a121514191/docker_2/blob/master/centos.PNG)
+![](https://github.com/a121514191/docker_volume/blob/master/create_volume.PNG)
 
 ### 查看
 
 >docker ps -a 
 
-![](https://github.com/a121514191/docker_2/blob/master/centos.PNG)
+![](https://github.com/a121514191/docker_volume/blob/master/ps_create_volume.PNG)
 
 ### 將你要的文件cp(複製)到剛剛建立的容器裡面
 
@@ -34,12 +34,12 @@ data volume container 也支援備份及還原的功能。
 docker cp path/file volume_test:/config/ (O)
 >docker cp test.txt volume_test:/config/ 
 
-![](https://github.com/a121514191/docker_2/blob/master/centos.PNG)
+![](https://github.com/a121514191/docker_volume/blob/master/O.PNG)
 
 docker cp path/file volume_test:/ config / (X)
 >docker cp test.txt volume_test:/ config / 
 
-![](https://github.com/a121514191/docker_2/blob/master/centos.PNG)
+![](https://github.com/a121514191/docker_volume/blob/master/X.PNG)
 
 
 
@@ -53,7 +53,7 @@ docker cp path/file volume_test:/ config / (X)
 >cd config
 >ls
 
-![](https://github.com/a121514191/docker_2/blob/master/lowercase.PNG)
+![](https://github.com/a121514191/docker_volume/blob/master/volume-from.PNG)
 
 ### 最後是導入和導出容器數據
 
