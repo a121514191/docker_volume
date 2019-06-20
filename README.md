@@ -11,7 +11,7 @@ Data Volume Container，其實就是個一般容器，儲存你的資料，
 
 data volume container 也支援備份及還原的功能。
 
-# 實作流程
+# 流程
 
 ### 首先建立一個容器 --name(命名)  busybox為dockerhub上的image
 
@@ -63,6 +63,26 @@ docker cp path/file volume_test:/ config / (X)
 
 !!!不知為何導出無數據
 
-### 實做部分
+### 實做
+
+# 準備一個空的Data Volume Container
+
+>docker create -v /var/www/html --name Practice busybox
+
+# 複製本機資料夾到container裡
+
+>docker cp test01 Practice:/var/www/html
+
+>docker cp test02 Practice:/var/www/html
+
+>docker cp test03 Practice:/var/www/html
+
+# 啟動container 
+
+>docker run -p 80:80 --volumes-from Practice -d --privileged=true test01 /usr/sbin/init
+
+# 進入查看
+
+>docker exec -it name /bin/bash
 
 
