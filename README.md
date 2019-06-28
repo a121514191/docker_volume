@@ -85,4 +85,14 @@ docker cp path/file volume_test:/ config / (X)
 
 >docker exec -it name /bin/bash
 
+參考資料
+
+https://ithelp.ithome.com.tw/articles/10192397
+
+https://blog.yowko.com/docker-data-volume-container/
+
+https://hackernoon.com/docker-data-containers-cb250048d162
+
+
+
 
